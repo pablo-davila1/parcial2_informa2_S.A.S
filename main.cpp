@@ -63,23 +63,26 @@ int main()
     }
     cout<<endl<<endl;
 
-    int a=0, b=0, heigth=2, whith =2,copheigth=0, copwhith =0;
-
+    unsigned int b=0, heigth=2, whith =2,copheigth=0, copwhith =0;
+    int a=whith;
     for (int y = 0; y<Yn ; ++y){
         for(int x = 0; x<Xn ; ++x){
             while(copheigth<heigth){
                 while(copwhith<whith){
                     cout<<" "<<"["<<copwhith<<"]"<<"["<<copheigth<<"]";
                     copwhith++;
+                    b++;
 
                 }
                copheigth++;
+               copwhith=b-a;
             }
             cout<<endl;
+            copheigth=0;
+            b=0;
 
         }
         copwhith= whith;
-        copheigth=heigth;
         heigth+=heigth;
         whith+=whith;
         cout<<endl;
