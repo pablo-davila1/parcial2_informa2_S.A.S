@@ -48,15 +48,43 @@ int main()
 
     cout<<"Las nuevas dimensiones de la imagen son: "<<new_sizeimgX<<" X "<<new_sizeimgY<<endl;
 
-    for (int y = 0; y<new_sizeimgX-3090 ; ++y){
-        for(int x = 0; x<new_sizeimgY-3090 ; ++x){
-            cout<<" "<<"["<<x<<"]"<<"["<<y<<"]"<<" = "<< img.pixelColor(x,y).red();
+    //dimensiones de prueba (Xn, Yn)
+    int Xn = new_sizeimgX-3085;
+    int Yn = new_sizeimgY-3085;
+
+    for (int y = 0; y<Yn ; ++y){
+        for(int x = 0; x<Xn ; ++x){
+            //cout<<" "<<"["<<x<<"]"<<"["<<y<<"]"<<" = "<< img.pixelColor(x,y).red();
+            cout<<" "<<"["<<x<<"]"<<"["<<y<<"]";
+
         }
         cout<<endl;
 
     }
+    cout<<endl<<endl;
 
+    int a=0, b=0, heigth=2, whith =2,copheigth=0, copwhith =0;
 
+    for (int y = 0; y<Yn ; ++y){
+        for(int x = 0; x<Xn ; ++x){
+            while(copheigth<heigth){
+                while(copwhith<whith){
+                    cout<<" "<<"["<<copwhith<<"]"<<"["<<copheigth<<"]";
+                    copwhith++;
+
+                }
+               copheigth++;
+            }
+            cout<<endl;
+
+        }
+        copwhith= whith;
+        copheigth=heigth;
+        heigth+=heigth;
+        whith+=whith;
+        cout<<endl;
+
+    }
 
 
 
