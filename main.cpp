@@ -65,7 +65,7 @@ int main()
     cout<<endl<<endl;
 
     unsigned int b=0, heigth=2, whith =2,copheigth=0, copwhith =0;
-    int a=whith,c=0;
+    int a=whith,c=0, d = heigth;
 
     int Xn2 = Xn/whith;
     int Yn2 = Yn/heigth;
@@ -84,14 +84,20 @@ int main()
             }
 
             cout<<endl;
-            copheigth=0;
+            copheigth-=d;
             b-=2;
             c+=whith;
 
 
         }
-        copwhith= whith;
-        heigth+=heigth;
+        //copwhith= whith;
+        //heigth+=d;
+        copheigth= heigth;
+        heigth+=d;
+        copwhith=0;
+        b=0;
+        c=0;
+
 
         cout<<endl;
 
