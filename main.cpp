@@ -52,6 +52,7 @@ int main()
     int Xn = new_sizeimgX-3085;
     int Yn = new_sizeimgY-3085;
 
+
     for (int y = 0; y<Yn ; ++y){
         for(int x = 0; x<Xn ; ++x){
             //cout<<" "<<"["<<x<<"]"<<"["<<y<<"]"<<" = "<< img.pixelColor(x,y).red();
@@ -64,11 +65,15 @@ int main()
     cout<<endl<<endl;
 
     unsigned int b=0, heigth=2, whith =2,copheigth=0, copwhith =0;
-    int a=whith;
-    for (int y = 0; y<Yn ; ++y){
-        for(int x = 0; x<Xn ; ++x){
+    int a=whith,c=0;
+
+    int Xn2 = Xn/whith;
+    int Yn2 = Yn/heigth;
+
+    for (int y = 0; y<Yn2 ; ++y){
+        for(int x = 0; x<Xn2 ; ++x){
             while(copheigth<heigth){
-                while(copwhith<whith){
+                while(copwhith<whith+c){
                     cout<<" "<<"["<<copwhith<<"]"<<"["<<copheigth<<"]";
                     copwhith++;
                     b++;
@@ -77,14 +82,17 @@ int main()
                copheigth++;
                copwhith=b-a;
             }
+
             cout<<endl;
             copheigth=0;
-            b=0;
+            b-=2;
+            c+=whith;
+
 
         }
         copwhith= whith;
         heigth+=heigth;
-        whith+=whith;
+
         cout<<endl;
 
     }
