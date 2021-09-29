@@ -15,8 +15,12 @@ int main()
     unsigned int imgX = img.height(); //Tamaños de la imagen original
     unsigned int imgY = img.height();
 
-    unsigned int img2X = 8; //tamaños de la imagen a crear
-    unsigned int img2Y = 8;
+    unsigned int img2X = 0; //tamaños de la imagen a crear
+    unsigned int img2Y = 0;
+    cout<<"Ingrese el tamaño en X de la nueva imagen: ";
+    cin>>img2X;
+    cout<<"Ingrese el tamaño en Y de la nueva imagen: ";
+    cin>>img2Y;
 
     cout<<"Las dimensiones de la imagen son: "<<imgX<<" X "<<imgY<<endl;
 
